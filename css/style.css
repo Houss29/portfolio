@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+/* Réinitialisation de base et styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* En-tête et navigation */
+.main .nav nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0077B6;
+}
+
+.main .nav nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.main .nav nav ul li {
+    margin: 0 15px; /* Ajustement des marges */
+}
+
+/* Boutons */
+button {
+    background-color: #0077B6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f87;
+}
+
+/* Titres */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #0077B6;
+    margin: 10px 0; /* Ajustement des marges */
+}
+
+/* Section Intro */
+.main .intro .gauche {
+    max-width: 600px; /* Limite de largeur */
+    margin: auto;
+    padding: 15px;
+    text-align: center; /* Centrage du texte */
+}
+
+.main .intro .gauche h1 {
+    font-size: 35px;
+    letter-spacing: 2px; /* Ajustement de l'espacement */
+}
+
+.main .intro .gauche p {
+    font-size: 18px; /* Ajustement de la taille de la police */
+    margin-bottom: 20px;
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Assurez-vous que les images ne dépassent pas leur conteneur */
+    height: auto; /* Maintient le rapport hauteur/largeur */
+}
+
+/* Section Compétences */
+.competence .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacement uniforme */
+}
+
+.competence .container .skills {
+    width: 150px; /* Largeur fixe pour les compétences */
+    height: 150px; /* Hauteur fixe */
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ... Autres styles spécifiques aux sections ... */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main .nav nav ul {
+        flex-direction: column;
+        background: #0077B6;
+    }
+
+    .main .nav nav ul li {
+        margin: 10px 0;
+    }
+
+    .main .intro .gauche {
+        width: auto;
+    }
+
+    .competence .container {
+        justify-content: center;
+    }
+}
+
+/* Styles pour les compétences */
+.competence {
+    height: auto;
+}
+.competence h3 {
+    font-size: 25px;
+    color: #0077B6;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.competence .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.competence .container .skills {
+    width: 150px; /* Taille ajustée pour les icônes de compétences */
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.competence .container .skills:hover {
+    transform: scale(1.1); /* Effet de survol pour mettre en valeur les compétences */
+}
+
+/* Styles pour la section Projets */
+.projet .container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden; /* Permet de gérer le débordement des éléments */
+}
+.projet .projet-card {
+    width: 100%; /* Ajustement pour que les cartes remplissent le conteneur */
+    transition: all 0.3s ease;
+    position: relative;
+}
+.projet .bouton-precedent,
+.projet .bouton-suivant {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0077B6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles pour la section Veille Technologique */
+.veille-techno {
+    height: auto;
+}
+.veille-techno .titre1 {
+    font-size: 25px;
+    color: #0077B6;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.veille-techno .def-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.veille-techno .def {
+    /* ... Styles existants ... */
+}
+/* ... Autres styles spécifiques aux sections ... */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Styles pour les appareils mobiles */
+    .main .nav nav ul {
+        flex-direction: column;
+        background: #0077B6;
+    }
+    .main .nav nav ul li {
+        margin: 10px 0;
+    }
+    .main .intro .gauche {
+        width: auto;
+    }
+    .competence .container {
+        justify-content: center;
+    }
+    /* ... Autres styles responsives ... */
+}
+/* Styles pour les icônes dans le footer */
+footer .icone a img {
+    max-width: 40px; /* Taille maximale pour contrôler la largeur */
+    height: auto; /* Hauteur automatique pour maintenir le ratio */
+    transition: transform 0.3s ease;
+}
+
+footer .icone a img:hover {
+    transform: scale(1.1); /* Effet de survol pour agrandir légèrement l'icône */
+}
+.projet .bouton-suivant {
+    display: none; /* Cela cache le bouton */
+}
+
+.projet .bouton-precedent{
+    display: none; /* Cela cache le bouton */
+}
